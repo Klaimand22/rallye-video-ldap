@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
             } else {
                 // upload
                 if (move_uploaded_file($_FILES['file']['tmp_name'], $target_file)) {
-                    mysqli_query($CONNEXION, "INSERT INTO rallyevideo_depot VALUES('46', '$name', '$target_file', '0', '$idteam')");
+                    mysqli_query($CONNEXION, "INSERT INTO rallyevideo_depot VALUES(NULL, '$name', '$target_file', '0', '$idteam')");
                     echo "Envoi effectué !";
                     mysqli_query($CONNEXION, "UPDATE rallyevideo_team SET depot = 1 WHERE idteam = '$idteam'");
                 } else {

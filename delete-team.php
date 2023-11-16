@@ -1,7 +1,8 @@
 <?php
-include("./components/header.php");
+include("./components/session-start.php");
 require_once "session-verif.php";
-require_once('connexion_db.php');
+include("./components/header.php");
+
 $iduser = $_SESSION["iduser"];
 
 $requete = mysqli_query($CONNEXION, "DELETE FROM rallyevideo_team WHERE idcreateur = '$iduser'");

@@ -1,6 +1,7 @@
 <?php
+include("./components/session-start.php");
+require_once "session-verif.php";
 include("./components/header.php");
-require_once('connexion_db.php');
 ?>
 
 <!DOCTYPE html>
