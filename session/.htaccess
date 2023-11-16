@@ -1,0 +1,6 @@
+AuthType Basic
+AuthBasicProvider ldap
+AuthLDAPURL "ldaps://ldap-bourget.univ-smb.fr/ou=people, ou=uds, dc=agalan, dc=org?uid"
+#AuthLDAPURL "ldap://ldap-bourget.univ-smb.fr/ou=people, ou=uds, dc=agalan, dc=org?uid"
+AuthName "IUT de Chambery, authentification LDAP (login et mot de passe de l'Universite)"
+Require valid-user
